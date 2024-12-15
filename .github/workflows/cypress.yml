@@ -3,7 +3,7 @@ name: Cypress E2E Tests
 on: push
 
 jobs:
-  chrome-tests:
+  firefox-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository with Cypress tests
@@ -22,14 +22,14 @@ jobs:
           cd awesome-localstack
           chmod +x run-docker-compose-ci.sh
           ./run-docker-compose-ci.sh
-      - name: Install chrome
-        uses: browser-actions/setup-chrome@v1
+      - name: Install firefox
+        uses: browser-actions/setup-firefox@v1
       - name: Install dependencies
         run: npm install
       - name: Run tests
         run: |
           npx cypress run \
-            --browser chrome \
+            --browser firefox \
             --env "login=${{ secrets.USERNAME }},password=${{ secrets.PASSWORD }}"
       - name: Warunkowe udostępnienie screenshotów przy failu
         uses: actions/upload-artifact@v4 
