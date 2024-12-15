@@ -39,7 +39,7 @@ jobs:
           name: cypress-screenshots
           path: cypress/screenshots
           if-no-files-found: ignore
-            - name: Load test report history
+      - name: Load test report history
         uses: actions/checkout@v4
         if: always()
         continue-on-error: true
@@ -120,7 +120,6 @@ jobs:
 
   edge-tests:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository with Cypress tests
         uses: actions/checkout@v4
