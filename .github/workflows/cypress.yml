@@ -36,8 +36,8 @@ jobs:
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+          name: cypress-screenshots-chrome
+          path: cypress/screenshots-chrome
           if-no-files-found: ignore
       - name: Load test report history
         uses: actions/checkout@v4
@@ -93,8 +93,8 @@ jobs:
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+          name: cypress-screenshots-firefox
+          path: cypress/screenshots-firefox
           if-no-files-found: ignore
       - name: Load test report history
         uses: actions/checkout@v4
@@ -150,8 +150,8 @@ jobs:
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+          name: cypress-screenshots-erge
+          path: cypress/screenshots-erge
           if-no-files-found: ignore
       - name: Load test report history
         uses: actions/checkout@v4
