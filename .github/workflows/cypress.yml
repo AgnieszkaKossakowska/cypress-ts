@@ -23,8 +23,9 @@ jobs:
           chmod +x run-docker-compose-ci.sh
           ./run-docker-compose-ci.sh
       - name: Install edge
-        uses: actions/download-artifact@v4
-          name: edge-stable-linux-amd64
+          uses: actions/download-artifact@v4
+            with:
+              name: edge-stable-linux-amd64
       - name: Install dependencies
         run: npm install
       - name: Run tests
