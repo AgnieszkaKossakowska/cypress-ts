@@ -4,3 +4,4 @@ cypress/downloads
 cypress/video
 cypress/screenshots
 .DS_Store
+allure-results
